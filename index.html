@@ -13,8 +13,8 @@
 		<ul class="logs"></ul>
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js" crossorigin="anonymous"></script>
+	<script src="js/jquery.min.js" crossorigin="anonymous"></script>
+	<script src="js/socket.io.js" crossorigin="anonymous"></script>
 	<script>
 		$(document).ready(function() {
 			var socket = io();
@@ -24,6 +24,7 @@
 			});
 
 			socket.on('qr', function(src) {
+				console.log(src);
 				$('#qrcode').attr('src', src);
 				$('#qrcode').show();
 			});
